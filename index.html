@@ -1,40 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 03- lógica da programação</title>
+    <title>Sistema - Veiculos</title>
+    <link rel="stylesheet" href="css/style_veiculos.css">
+    <script src="js/script_veiculos.js" type="module" defer></script>
 </head>
 <body>
-    <div id="geral">
-        <h3>Cadastro de Veículos</h3>
-        <div id="div-form">
+    <h1 style="text-align: center;">TopCar</h1>
+    <h3 style="text-align: center;">Descreva as informações do seu veiculo</h3>
+    <hr>
+    <form id="form">
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo">
 
-            <form id="formDados">
-                <label for="marca">Marca</label>
-                <input type="text" name="marca" id="marca">
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca">
 
-                <label for="modelo">Modelo</label>
-                <input type="text" name="modelo" id="modelo">
+        <label for="placa">Placa:</label>
+        <input type="text" id="placa" name="placa">
 
-                <label for="placa">Placa</label>
-                <input type="text" name="placa" id="placa">
+        <label for="ano">Ano de fabricação:</label>
+        <input type="number" id="ano" name="ano">
 
-                <label for="anodefabricacao">Ano de fabricação</label>
-                <input type="text" name="anodefabricacao" id="anodefabricacao">
+        <label for="valor">Valor de mercado</label>
+        <input type="number" id="valor" name="valor">
 
-                <label for="valordemercadodoveiclo">Valor de mercado do veículo</label>
-                <input type="text" name="valordemercadodoveiclo" id="valordemercadodoveiclo">
+        <label for="tipo">Tipo de combustivel</label>
+       <select name="tipo" id="tipo">
+        <option value="" selected disabled >Escolha um tipo</option>
+        <option value="GC">Gasolina Comum</option>
+        <option value="E">Etanol</option>
+        <option value="bio">Biocombustíveis</option>
+        <option value="hib">Híbridos</option>
+        <option value="ele">Elétrico</option>
+       </select>
+       <br>
+        <button type="submit" id="btn-reset">Enviar</button>
+        <button type="reset" id="btn-reset">Limpar</button>
+    </form>
+    <h4 style="text-align: center;">Lista das Caracteristicas</h4>
+    <div id="div-lista">
 
-                <label for="tipodecombustivel">Tipo de combustível</label>
-                <input type="text" name="tipodecombustivel" id="tipodecombustivel">
-
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpar</button>
-            </form>
-        
-        </div>
     </div>
-    
 </body>
 </html>
